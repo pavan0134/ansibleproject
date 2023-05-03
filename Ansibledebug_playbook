@@ -1,0 +1,36 @@
+Case-1
+---
+ - name: Debug case1
+   hosts: papa
+   tasks:
+    - name: Display msg
+      debug: msg="Hello There"
+
+Case-2
+---
+ - name: Debug case2
+   hosts: papa
+   tasks:
+    - name: Display msg
+      debug:
+       msg: Hello
+
+Case-3
+---
+ - name: Debug case3
+   hosts: papa
+   tasks:
+    - name: Displaying Multiple msgs
+      debug:
+       msg:
+            hello
+            hey
+            TC
+
+Case-4
+---
+ - name: Debug case5
+   hosts: papa
+   tasks:
+    - name: o/p with Host variables
+      debug: msg="Hostname is {{inventory_hostname}}"
