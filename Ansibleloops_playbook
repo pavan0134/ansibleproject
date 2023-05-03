@@ -1,0 +1,15 @@
+Case-i
+
+---
+ - name: Loops case1
+   hosts: papa
+   tasks:
+    - name: Multiple files creation with loop(item)
+      file: dest=/tmp/"{{item}}" state=touch
+      with_items:
+       - f1
+       - f2
+       - f3
+      register: file
+
+
